@@ -1,4 +1,5 @@
 /.idea/
+/tools/php-cs-fixer/vendor
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
