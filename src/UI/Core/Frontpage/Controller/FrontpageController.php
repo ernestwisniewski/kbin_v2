@@ -8,7 +8,6 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class FrontpageController extends AbstractController
 {
-    #[Route('/frontpage', name: 'app_frontpage')]
     public function __invoke(): Response
     {
         return $this->render('pages/frontpage.html.twig');
