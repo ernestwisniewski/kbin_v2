@@ -1,5 +1,4 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: Kbin\Controller
-    type: attribute
+frontpage:
+    path: /
+    controller: Kbin\UI\Core\Frontpage\Controller\FrontpageController
+
