@@ -2,9 +2,6 @@
 
 namespace Kbin\Domain\Core\Community;
 
-use App\Domain\Customer\Command\RegisterCustomer;
-use Ecotone\Modelling\Attribute\CommandHandler;
-use Kbin\Domain\Core\Community\Command\CreateCommunity;
 use Symfony\Component\Uid\AbstractUid;
 
 #[Aggregate]
@@ -13,17 +10,26 @@ class Community
     private function __construct(
         #[Identifier]
         private AbstractUid   $communityId,
-        private CommunityName $name
+        private CommunityName $communityName
     )
     {
     }
 
-    #[CommandHandler]
-    public static function register(CreateCommunity $command): self
+    public static function create(AbstractUid $communityId, CommunityName $communityName): self
     {
         return new self(
-            $command->communityId,
-            $command->communityName,
+            $communityId,
+            $communityName,
         );
+    }
+
+    public function getCommunityId(): AbstractUid
+    {
+        return $this->communityId;
+    }
+
+    public function getCommunityName(): CommunityName
+    {
+        return $this->communityName;
     }
 }

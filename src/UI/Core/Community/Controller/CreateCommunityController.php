@@ -20,7 +20,6 @@ final class CreateCommunityController extends AbstractController
     {
         $community = $this->commandBus->send(
             new CreateCommunity(
-                new UuidV4(),
                 new CommunityName('Music')
             )
         );

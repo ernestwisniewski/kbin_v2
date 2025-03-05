@@ -6,7 +6,7 @@ use Assert\Assert;
 
 class CommunityName
 {
-    public function __construct(private string $communityName)
+    public function __construct(private readonly string $communityName)
     {
         Assert::that($communityName)
             ->notEmpty('Community name cannot be empty.')
