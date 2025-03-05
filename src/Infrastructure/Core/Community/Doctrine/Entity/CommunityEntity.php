@@ -8,7 +8,7 @@ use Ramsey\Uuid\Uuid;
 use Symfony\Bridge\Doctrine\Types\UuidType;
 
 #[ORM\Entity(repositoryClass: CommunityRepository::class)]
-class Community
+class CommunityEntity
 {
     #[ORM\Column(type: UuidType::NAME, unique: true)]
     private Uuid $id;

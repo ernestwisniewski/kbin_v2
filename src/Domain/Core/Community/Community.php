@@ -9,8 +9,8 @@ class Community
 {
     private function __construct(
         #[Identifier]
-        private AbstractUid   $communityId,
-        private CommunityName $communityName
+        private readonly AbstractUid   $communityId,
+        private readonly CommunityName $communityName
     )
     {
     }

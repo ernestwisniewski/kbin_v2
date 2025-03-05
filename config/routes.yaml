@@ -6,3 +6,4 @@ frontpage:
 community_create:
     path: /newCommunity
     controller: Kbin\UI\Core\Community\Controller\CreateCommunityController
+    methods: [GET, POST]
