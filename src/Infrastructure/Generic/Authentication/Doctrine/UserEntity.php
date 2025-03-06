@@ -1,9 +1,8 @@
 <?php
 
-namespace Kbin\Infrastructure\Generic\Authentication\Doctrine\Entity;
+namespace Kbin\Infrastructure\Generic\Authentication\Doctrine;
 
 use Doctrine\ORM\Mapping as ORM;
-use Kbin\Infrastructure\Generic\Authentication\Doctrine\Repository\UserRepository;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 

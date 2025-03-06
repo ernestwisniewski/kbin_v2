@@ -2,14 +2,12 @@
 
 namespace Kbin\UI\Core\Community\DTO;
 
+use Kbin\Domain\Core\Community\CommunityName;
 use Symfony\Component\Validator\Constraints as Assert;
 
 class CommunityDTO
 {
-    public const int MIN_NAME_LENGTH = 2;
-    public const int MAX_NAME_LENGTH = 25;
-
     #[Assert\NotBlank]
-    #[Assert\Length(min: self::MIN_NAME_LENGTH, max: self::MAX_NAME_LENGTH)]
+    #[Assert\Length(min: CommunityName::MIN_NAME_LENGTH, max: CommunityName::MAX_NAME_LENGTH)]
     public string $name;
 }

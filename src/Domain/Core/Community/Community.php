@@ -2,6 +2,8 @@
 
 namespace Kbin\Domain\Core\Community;
 
+use Ecotone\Modelling\Attribute\Aggregate;
+use Ecotone\Modelling\Attribute\Identifier;
 use Symfony\Component\Uid\AbstractUid;
 
 #[Aggregate]

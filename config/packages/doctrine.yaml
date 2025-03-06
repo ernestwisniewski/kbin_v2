@@ -18,12 +18,18 @@ doctrine:
             Doctrine\DBAL\Platforms\PostgreSQLPlatform: identity
         auto_mapping: true
         mappings:
-            Kbin\Infrastructure\Generic\Authentication\Doctrine\Entity:
+            Kbin\Infrastructure\Generic\Authentication\Doctrine:
                 type: attribute
                 is_bundle: false
-                dir: '%kernel.project_dir%/src/Infrastructure/Generic/Authentication/Doctrine/Entity'
-                prefix: 'Kbin\Infrastructure\Generic\Authentication\Doctrine\Entity'
-                alias: Kbin\Infrastructure\Generic\Authentication\Doctrine\Entity
+                dir: '%kernel.project_dir%/src/Infrastructure/Generic/Authentication/Doctrine'
+                prefix: 'Kbin\Infrastructure\Generic\Authentication\Doctrine'
+                alias: Kbin\Infrastructure\Generic\Authentication\Doctrine
+            Kbin\Infrastructure\Core\Community\Doctrine:
+                type: attribute
+                is_bundle: false
+                dir: '%kernel.project_dir%/src/Infrastructure/Core/Community/Doctrine'
+                prefix: 'Kbin\Infrastructure\Core\Community\Doctrine'
+                alias: Kbin\Infrastructure\Core\Community\Doctrine
         controller_resolver:
             auto_mapping: false
 

@@ -1,10 +1,9 @@
 <?php
 
-namespace Kbin\Infrastructure\Generic\Authentication\Doctrine\Repository;
+namespace Kbin\Infrastructure\Generic\Authentication\Doctrine;
 
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
-use Kbin\Infrastructure\Generic\Authentication\Doctrine\Entity\UserEntity;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\PasswordUpgraderInterface;
